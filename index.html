@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="button-generator">
+      <form id="controls">
+        <label for="text">Text</label>
+        <input type="text" name="text" id="text" value="Click" />
+
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" value="#ffffff"/>
+
+        <label for="backgroundColor">Background Color</label>
+        <input type="color" name="backgroundColor" id="backgroundColor" value="#d92c05"/>
+
+        <label for="height"> Height</label>
+        <input type="range" name="height" id="height" min="0" max="300" value="33"/>
+
+        <label for="width"> Width</label>
+        <input type="range" name="width" id="width" min="0" max="500" value="90"/>
+
+        <label for="border"> Border </label>
+        <input type="text" name="border" id="border" value="none" disabled />
+
+        <label for="borderRadius"> Border Radius</label>
+        <input type="number" name="borderRadius" id="borderRadius" value="8"/>
+
+        <label for="fontFamily"> Font Family</label>
+        <select name="fontFamily" id="fontFamily">
+          <option value="Roboto" selected>Roboto</option>
+          <option value="Inter">Inter</option>
+          <option value="monospace">Monospace</option>
+        </select>
+
+        <label for="fontSize"> Font Size</label>
+        <input type="number" name="fontSize" id="fontSize" value='18'/>
+      </form>
+    </section>
+
+    <section class="result">
+      <button id="btn" style="font-size:18px;">
+        Click
+      </button>
+      <code id="description">
+      </code>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
